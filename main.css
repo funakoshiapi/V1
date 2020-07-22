@@ -228,6 +228,7 @@ section#contact {}
     height: 200px;
     background-color: rgb(168, 178, 209);
     margin: 0px auto;
+    animation: bounceIn 4s;
 }
 
 .socialmedia li{
@@ -265,6 +266,7 @@ section#contact {}
     background-color: rgb(168, 178, 209);
     margin: 0px auto;
     overflow: hidden;
+    animation: bounceIn 4s;
 }
 
 .email {
@@ -278,25 +280,35 @@ section#contact {}
 
 .contEmail {
 
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     letter-spacing: 0.1em;
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
     margin: 20px auto;
     padding: 10px;
-    color: yellow;
+    color: rgb(204, 204, 204);
+    opacity: 0.7;
+}
 
+
+.contEmail:hover {
+  
+    transform: scale(1.1);
+    color: rgb(126, 212, 212);
+    opacity: 1;
+    
 }
 
 .emailLink a {
     display: inline-block;
     text-decoration-skip-ink: auto;
-    color: inherit;
     position: relative;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    
 }
+
 
 .layout-1{
     margin: 0 0 0 180px;
@@ -346,6 +358,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .txt-type{
     color: rgb(126, 212, 212);
+    
 }
 
 
@@ -387,27 +400,214 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     text-decoration: none;
     background: #3b589800;
+    color: rgb(204, 204, 204);
+    opacity: 0.7;
   }
 
   .fa:hover {
-    opacity: 0.7;
+    transform: scale(1.2);
+    color: rgb(126, 212, 212);
+    opacity: 1;
+    
+    
+
+    
+    
 }
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+.delay1{
+    animation: bounceIn 2s;
+  }
+  .delay2 {
+    animation: bounceIn 4s;
+    
+  }
+  .delay3 {
+    animation: bounceIn 6s;
+    
+  }
+  .delay4 {
+    animation: bounceIn 8s;
+   
+  }
+
+  
 
 .fa-github {
-    color: white;
+    
   }
 
   .fa-linkedin {
    
-    color: white;
+   
   }
 
   .fa-codepen {
    
-    color: white;
+  
   }
 
   .fa-instagram {
-   
+ 
+  }
+
+
+  /* ABOUT ME SECTION */
+
+
+  .aboutheader{
+    font-size: 32px;
+    margin: 10px 0px 40px;
+    justify-content: flex-start;
+    color: rgb(126, 212, 212);
+    display: flex;
+  
+
+  }
+
+  #header__line::after{
+    content: "";
+    display: flex;
+    height: 1px;
+    width: 600px;
+    background-color: rgb(48, 60, 85);
+    top: -5px;
+    margin-left: 20px;
     color: white;
+    
+  }
+  .about--wraper{
+     display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: flex-start;
+    background-color: #00000000;
+    width: 1153px;
+    height: auto;
+    flex-wrap: wrap;
+    
+  }
+
+
+  .aboutme--info p{
+    text-align: left;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 1.5rem;
+  }
+
+
+  #me--picture{
+      flex: 1;
+      justify-content: flex-end;
+  }
+
+  .aboutme--info{
+      flex: 1;
+      justify-content: flex-start;
+  }
+
+
+  /* .me--picture img{
+    width: 400px;
+    height: auto;
+    
+  } */
+
+  .break{
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  .about__skills{
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 200px));
+    overflow: hidden;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    list-style: none;
+  }
+
+  .skills{
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-size: 20px;
+    color: rgb(136, 146, 176);
+    text-align: left;
+  }
+
+  .skills::after{
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: rgb(100, 255, 218);
+    font-size: 14px;
+    line-height: 12px;
+  }
+
+
+  /* Styles for the tilt block */
+
+ 
+#me--picture {
+    height: 368px;
+    max-width: 384px;
+    background-size: 100%;
+    display: block;
+    background-color: grey;
+    margin: 0 auto;
+    transition: box-shadow 0.1s, transform 0.1s;
+    border-radius: 3px;
+   
+    
+    /*
+      * Adding image to the background
+      * No relation to the hover effect.
+      */
+    
+  
+      /* background-image: linear-gradient(to top, rgb(27 44 65 / 37%), rgb(126 212 212 / 58%)), url(/img/0.jpeg);  */
+
+      /* background-image: linear-gradient(to top, rgb(27 44 65 / 65%), rgb(29 46 69 / 58%)), url(/img/0.jpeg); */
+
+      
+      background-image: linear-gradient(to top, rgb(217 222 28/ 37%), rgb(126 212 212 / 30%)), url(/img/0.jpeg);
+
+      
+      
+    
+
+
+}
+  
+
+  
+  #me--picture:hover {
+    
+    background-image:
+    linear-gradient(to top, rgba(45, 230, 190, 0), rgba(15, 177, 150, 0)),
+    url('/img/0.jpeg'); 
+    box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
+    cursor: pointer;
+    transition: .2s;
   }
